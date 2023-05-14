@@ -1,3 +1,6 @@
+# Email regex check
+
+## Sample emails
 simple@example.com,
 very.common@example.com,
 disposable.style.email.with+symbol@example.com,
@@ -28,6 +31,8 @@ this\ still\"not\\allowed@example.com,
 i_like_underscore@but_its_not_allowed_in_this_part.example.com,
 QA[icon]CHOCOLATE[icon]@test.com
 
+## Regex implementations
+
 ^[\w\d\.-]+@\[?[\w\d\.\-\]:?+\.[\w]+
 ^([\w\./+-]{1,64})@\[?([\w\d\./+-:]+)\]?
 ^([\w\.+-/]{1,64})@\[?([a-zA-Z\d/+-:]+)\]?
@@ -36,6 +41,8 @@ QA[icon]CHOCOLATE[icon]@test.com
 ^([a-zA-Z0-9\.+-/!%_" ](?!"\w)){1,64}@\[?([a-zA-Z\d/+-:]+)\]?
 ^([\w\d\.+-/!%_" (),:;<>](?!"\w)){1,64}@\[?([a-zA-Z\d/+-:]+)\]?.$
 ^([\w\d\.+\-/!%_" æøåÆØÅ](?!"\w)(?!\[)){1,64}@\[?([a-zA-Z\d/+-:]+)\]?.$
+
+## Final regex checks
 
 Strict and safe: ^([\w\d\.+\-/!%_" æøåÆØÅ](?!"\w)(?!\[)){1,64}@\[?([a-zA-Z\d/+-:]+)\]?.$
 Not strict: ([\w\d\.+\-/!%_" æøåÆØÅ](?!"\w)(?!\[)){1,64}@\[?([a-zA-Z\d/+-:]+)\]?.
